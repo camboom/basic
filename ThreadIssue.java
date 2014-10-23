@@ -12,7 +12,7 @@ public class ThreadIssue {
                  } catch(InterruptedException e) { }        
              }    
          }).start();
- System.out.println("Fake Thread to test USO issue " + x );
+ System.out.println("Generic Thread #" + x );
       x++;
       }
 
