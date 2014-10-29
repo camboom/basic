@@ -1,0 +1,1 @@
+grep -v -x -f f1 f2
