@@ -1,0 +1,3 @@
+Find Large files recursively.
+
+find {/path/to/directory/} -type f -size +{size-in-kb}k -exec ls -lh {} \; | awk '{ print $9 ": " $5 }'
