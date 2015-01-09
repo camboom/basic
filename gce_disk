@@ -1,0 +1,15 @@
+#How to resize GCE disk on /dev/sda
+1. Create your vm and take a snapshot
+2. Create a new disk from snapshot, but increase the size when doing so
+3. Create a new instance, using new, embiggened disk
+4. Log onto the vm and use fdisk, sudo fdisk /dev/sda
+  5. Type c, u to change sector type and flag
+  6. Type p to list partitions
+  7. Type d to list the delete the only partition
+  8. Type n to create a new partition
+  9. Select Primary, 1
+  10. Select default start and end cylinders
+  11. Type p to check work
+  12. Type w to save results
+13. Reboot
+14. Use resize2fs to recognize new size, sudo resize2fs /dev/sda1
