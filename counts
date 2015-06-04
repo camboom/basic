@@ -1,0 +1,4 @@
+#!/bin/sh
+for p in 'pattern1' 'pattern2'; do
+  printf '%s = ' '$p'; grep -E -r -e '$p' '${1:-.}/somefile' | wc -l
+done
