@@ -1,0 +1,24 @@
+echo svn Revision number
+a=$1
+echo Enter svn username
+b=$2
+echo Enter svn password
+c=$3
+
+svn -R:[$a] co https://blah.com /home/blah/trunk --username=$b --password=$c
+
+cd /home/blah/trunk
+
+find ./files -type f -exec sed -i 's/oldterm/newterm/g' {} +
+
+ant
+
+cp myql.sql /home/location
+cp build.war /opt/jboss-4.0.2/server/deploy/
+
+echo 'yes'
+
+chown -Rf jboss:jboss /home/user/data
+chown -Rf jboss:jboss /opt/jboss-4.0.2/
+
+/home/blah/script.sh
